@@ -4,7 +4,7 @@ import './Tempapp.css';
 const Tempapp = () => {
     const [city, setCity] = useState(null);
     const [search, setSearch] = useState("Delhi");
-    const [units,setUnits] = useState("metric");0;
+    const [units,setUnits] = useState("metric");
 
     useEffect(() => {
 
