@@ -4,7 +4,10 @@
     box-sizing: border-box;
 }
 body{
-    background-color: #fff;
+    /* background: linear-gradient(90deg, #02a081, #ddf3e7); */
+    background-color:  #05263F ;
+    /* #05263F */
+    /* #145ca3 */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,43 +25,20 @@ html{
 }
 .box{
     position: absolute;
-    top: 20%;
+    top: 15%;
     left: 40%;
-    height: 35rem;
+    height: 38rem;
     width: 27rem;
-    background-color: rgba(255, 255, 255, 1.9);
+    background-color:#fff;
     border: 2px solid #ccc;
-    border-radius: 5px;
+    border-radius: 15px;
     /* margin: 10px auto; */
     box-shadow: #ccc;
-    background-color: lightblue;
+    
 }
-.wave{
-    opacity: 0.3;
-    position: absolute;
-    top: 120%;
-    left: 50%;
-    background: white;
-    width: 50rem;
-    height: 50rem;
-    margin-left: -50rem;
-    margin-top: -20rem;
-    transform-origin: 50% 48%;
-    border-radius: 43%;
-    animation: drift 3000ms infinite linear;
-    z-index: 1;
-}
-.wave-three{
-    animation: drift 5000ms infinite linear;
-    z-index: 2 !important;
-    opacity: 0.2;
-}
-.wave-two{
-    background-color: red;
-    animation: drift 7000ms infinite linear;
-    z-index: 3 !important;
-    opacity: 0.1;
-}
+
+
+
 .box:after {
     content: "";
     display: block;
@@ -70,36 +50,113 @@ html{
 .inputData{
     display: flex;
     margin: 10px auto;
+    /* background-color: red; */
     
 }
 input{
     background-color: #fff;
-    width: 315px;
+    width: 250px;
     height: 40px;
-    border-radius: 20px;
+    /* border-radius: 20px; */
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 15px;
+    padding-left: 15px;
     font-size: 1.5rem;
-    border: 1px solid rgb(30, 30, 30);
+    border: none;
+    outline: none;
+    /* margin-left: 10px; */
+
     
 }
+.fa-location-dot{
+    color: black;
+    margin-left: 12px;
+    margin-top: 4px;
+}
+.fa-magnifying-glass{
+    margin-right: 10px;
+    margin-top: 1px;
+    background-color: lightblue;
+    border-radius: 50%;
+    padding: 7px;
+    cursor: pointer;
+}
+i{
+    color: black;
+    font-size: 22px;
+}
 .info{
-    background-color: rgb(245, 242, 242);
+    /* background-color: rgb(245, 242, 242); */
     height: 20rem;
     text-align: center;
     align-items: center;
 }
-.info h2{
-    font-size: 32px;
-    padding-top: 100px;
-    padding-bottom: 2rem;
-    
+.info img{
+    height: 150px;
+    margin-bottom: 13px;
 }
+
 .info h1{
     margin-bottom: 10px;
+    font-size: 44px;
 }
-.info h3{
-    color: #ccc;
+sup{
+    font-size: 25px;
+}
+
+.tabs{
+    max-width: 27rem;
+    display:flex;
+    height: 100px;
+    margin-top: 10px;
+}
+.tabs2{
+    max-width: 27rem;
+    display:flex;
+    height: 100px;
+    margin-top: 10px;
+
+}
+.humidity{
+    margin: 7px;
+    background-color: whitesmoke;
+    height: 45px;
+    width: 140px;
+    padding-left: 20px;
+    justify-content: flex-start;
+}
+.humidity img{
+    height: 25px;
+}
+.wind{
+    margin:7px;
+    height: 45px;
+    width: 140px;
+    background-color: whitesmoke;
+    padding-right: 20px;
+    justify-content: flex-end;
+}
+.wind img{
+    height: 25px;
+}
+.tabs .humidity, .tabs .wind{
+    display: flex;
+    align-items: center;
+    width: 50%;
+    /* height: 100px; */
+}
+.div1{
+    margin: 7px;
+    height: 40px;
+    width: 140px;
+    background-color: blue;
+
+}
+.div2{
+    margin: 7px;
+    height: 40px;
+    width: 140px;
+    background-color: blue;
 }

@@ -4,7 +4,7 @@ import './Tempapp.css';
 const Tempapp = () => {
     const [city, setCity] = useState(null);
     const [search, setSearch] = useState("Delhi");
-    const [units,setUnits] = useState("metric");
+    const [units, setUnits] = useState("metric");
 
     useEffect(() => {
 
@@ -16,7 +16,7 @@ const Tempapp = () => {
             setCity(resJson.main);
         }
         fetchApi();
-    }, [search,units]);
+    }, [search, units]);
 
 
 
@@ -24,37 +24,56 @@ const Tempapp = () => {
         <>
             <div className="box">
                 <div className="inputData">
+                    <i className="fa-solid fa-location-dot"></i>
                     <input
                         type="search"
                         className="inputfield"
                         placeholder="Enter a city..."
                         onChange={(event) => { setSearch(event.target.value) }}
                     />
+                    <i className="search" class="fa-solid fa-magnifying-glass"></i>
                 </div>
+                {/* <div class="not-found">
+                    <img src="images/404.png" />
+                        <p>Oops! Invalid location :/</p>
+                </div> */}
 
                 {!city ? (
                     <p>No Data Found</p>
                 ) : (
-                    <div className="info">
-                        <h2 className="location">
-                            <i className="fa-solid fa-street-view"></i>{search}
-                        </h2>
-                        <h1 className="temp">
-                            {city.temp}°C
-                        </h1>
-                        <h3 className="tempmin_max">Min: 5.23C° | Max: 5.99°C</h3>
+                    <>
+                        <div className="info">
+                            <img src="sunshine.gif" alt="" />
+                            <h1 className="temp">
+                                {city.temp}<sup>°C</sup>
+                            </h1>
+                            <h3><span>scattered Clouds</span></h3>
 
-                    </div>
-                    )
+                        </div>
+                        <div className="tabs">
+                            <div className="humidity">
+                                <img src="humidity.svg" alt="" />
+                                <div>
+                                    <span>12</span>
+                                    <p>Humidity</p>
+                                </div>
+                            </div>
+                            <div className="wind">
+                                <img src="windy.svg" alt="" />
+                                <div>
+                                    <span>55</span>
+                                    <p>Wind Speed</p>
+                                </div>
+                            </div>
+                            <div className="tabs2">
+                            {/* <div className="div1">bb</div> */}
+                            {/* <div className="div2">22</div> */}
+                            </div>
+                        </div>
+                    </>
+                )
 
                 }
-
-
-                <div className="waves">
-                    <div className="wave-one"></div>
-                    <div className="wave-two"></div>
-                    <div className="wave-three"></div>
-                </div>
             </div>
 
         </>
