@@ -3,6 +3,7 @@ import './Tempapp.css';
 
 const Tempapp = () => {
     const [city, setCity] = useState(null);
+    
     const [search, setSearch] = useState("Delhi");
     const [units, setUnits] = useState("metric");
 
@@ -33,13 +34,12 @@ const Tempapp = () => {
                     />
                     <i className="search" class="fa-solid fa-magnifying-glass"></i>
                 </div>
-                {/* <div class="not-found">
-                    <img src="images/404.png" />
-                        <p>Oops! Invalid location :/</p>
-                </div> */}
 
                 {!city ? (
-                    <p>No Data Found</p>
+                    <>
+                    <p><img src="404.png" width="310px" /> </p>
+                    <p>Oops! Invalid  location </p>
+                    </>
                 ) : (
                     <>
                         <div className="info">
@@ -54,20 +54,46 @@ const Tempapp = () => {
                             <div className="humidity">
                                 <img src="humidity.svg" alt="" />
                                 <div>
-                                    <span>12</span>
+                                    <span>{city.humidity}</span>
                                     <p>Humidity</p>
                                 </div>
                             </div>
                             <div className="wind">
                                 <img src="windy.svg" alt="" />
                                 <div>
-                                    <span>55</span>
+                                    <span>{city.wind}</span>
                                     <p>Wind Speed</p>
                                 </div>
                             </div>
-                            <div className="tabs2">
-                            {/* <div className="div1">bb</div> */}
-                            {/* <div className="div2">22</div> */}
+
+                            <div className="temp_min">
+                                <i class="fa-solid fa-temperature-quarter"></i>
+                                <div>
+                                    <span>{city.temp_min} ℃ </span>
+                                    <p>Min Temp</p>
+                                </div>
+                            </div>
+                            <div className="temp_max">
+                                <i class="fa-solid fa-temperature-three-quarters"></i>
+                                <div>
+                                    <span>{city.temp_max}℃</span>
+                                    <p>Max Temp</p>
+                                </div>
+                            </div>
+                            <div className="visibility">
+                                <img src="visibility.svg" alt="" />
+                                <div>
+
+                                    <span>{city.visibility}</span>
+                                    <p>Visibility</p>
+                                </div>
+                            </div>
+                            <div className="pressure">
+                                <img src="visibility.svg" alt="" />
+                                <div>
+                                    <span>{city.pressure}</span>
+                                    <p>Pressure</p>
+                                </div>
                             </div>
                         </div>
                     </>
@@ -83,3 +109,4 @@ export default Tempapp;
 
 // https://api.openweathermap.org/data/2.5/weather?q={city name}&appid=16fdd839b6cc365ac6b3398620eb8607
 // 
+

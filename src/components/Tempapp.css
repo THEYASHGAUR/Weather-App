@@ -1,11 +1,12 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
     /* background: linear-gradient(90deg, #02a081, #ddf3e7); */
-    background-color:  #05263F ;
+    background-color: #05263F;
     /* #05263F */
     /* #145ca3 */
     display: flex;
@@ -14,50 +15,39 @@ body{
     flex-wrap: wrap;
     height: 100vh;
     width: 100vw;
-    
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
 }
-html{
+
+html {
     font-size: 100%;
     height: 100%;
 
 }
-.box{
+
+.box {
     position: absolute;
     top: 15%;
     left: 40%;
-    height: 38rem;
+    height: 44rem;
     width: 27rem;
-    background-color:#fff;
+    background-color: #fff;
     border: 2px solid #ccc;
     border-radius: 15px;
-    /* margin: 10px auto; */
+    margin-bottom: 50px;
     box-shadow: #ccc;
-    
-}
-
-
-
-.box:after {
-    content: "";
-    display: block;
-    left: 0;
-    top: 0;
-    width: 100%;
 
 }
-.inputData{
+.inputData {
     display: flex;
     margin: 10px auto;
-    /* background-color: red; */
-    
 }
-input{
+
+input {
     background-color: #fff;
     width: 250px;
     height: 40px;
-    /* border-radius: 20px; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -66,16 +56,15 @@ input{
     font-size: 1.5rem;
     border: none;
     outline: none;
-    /* margin-left: 10px; */
-
-    
 }
-.fa-location-dot{
+
+.fa-location-dot {
     color: black;
     margin-left: 12px;
     margin-top: 4px;
 }
-.fa-magnifying-glass{
+
+.fa-magnifying-glass {
     margin-right: 10px;
     margin-top: 1px;
     background-color: lightblue;
@@ -83,80 +72,54 @@ input{
     padding: 7px;
     cursor: pointer;
 }
-i{
+
+i {
     color: black;
     font-size: 22px;
 }
-.info{
-    /* background-color: rgb(245, 242, 242); */
+
+.info {
     height: 20rem;
     text-align: center;
     align-items: center;
 }
-.info img{
+
+.info img {
     height: 150px;
     margin-bottom: 13px;
 }
 
-.info h1{
+.info h1 {
     margin-bottom: 10px;
     font-size: 44px;
 }
-sup{
+
+sup {
     font-size: 25px;
 }
 
-.tabs{
-    max-width: 27rem;
-    display:flex;
-    height: 100px;
-    margin-top: 10px;
+.tabs {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 10px;
+    padding: 10px;
 }
-.tabs2{
-    max-width: 27rem;
-    display:flex;
-    height: 100px;
-    margin-top: 10px;
 
-}
-.humidity{
-    margin: 7px;
+.humidity,
+.wind,
+.temp_min,
+.temp_max,
+.pressure,
+.visibility {
     background-color: whitesmoke;
-    height: 45px;
-    width: 140px;
-    padding-left: 20px;
-    justify-content: flex-start;
-}
-.humidity img{
-    height: 25px;
-}
-.wind{
-    margin:7px;
-    height: 45px;
-    width: 140px;
-    background-color: whitesmoke;
-    padding-right: 20px;
-    justify-content: flex-end;
-}
-.wind img{
-    height: 25px;
-}
-.tabs .humidity, .tabs .wind{
+    padding: 10px;
     display: flex;
-    align-items: center;
-    width: 50%;
-    /* height: 100px; */
-}
-.div1{
-    margin: 7px;
-    height: 40px;
-    width: 140px;
-    background-color: blue;
+    gap: 5px;
 
 }
-.div2{
-    margin: 7px;
-    height: 40px;
-    width: 140px;
-    background-color: blue;
+
+.humidity img,
+.wind img {
+    height: 25px;
 }
+
