@@ -4,7 +4,7 @@
 3. 
 
 
-Current Features of this Repository
+## Current Features of this Repository
 1. You can search the weather of any city or state.
 2. in addition you will see the humidity , pressure , wind speed , min temp , max temp , visibility.
 
